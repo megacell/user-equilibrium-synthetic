@@ -1,0 +1,4 @@
+cd ..
+cd M_Steel_solver
+./GEF
+echo done

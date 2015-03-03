@@ -1,0 +1,32 @@
+<LinkList>
+	<link lanes="0" lane_offset="0" length="211.336" speed_limit="11" link_name="E Walnut St" id="-908298894" in_sync="true">
+          <begin node_id="49332695"/>
+          <end node_id="890533383"/>
+          <position>
+            <point lat="34.148" lng="-118.0892" elevation="0"/>
+            <point lat="34.14793" lng="-118.08691" elevation="0"/>
+          </position>
+          <shape>_ploEnhwoULiM</shape>
+          <link_type id="0" name=""/>
+        </link>
+        <link lanes="0" lane_offset="0" length="78.98" speed_limit="17" link_name="Fair Oaks Ave" id="-895152464" in_sync="true">
+          <begin node_id="850852381"/>
+          <end node_id="931702626"/>
+          <position>
+            <point lat="34.12319" lng="-118.15028" elevation="0"/>
+            <point lat="34.12248" lng="-118.15029" elevation="0"/>
+          </position>
+          <shape>}tgoEffcpUlC@</shape>
+          <link_type id="0" name=""/>
+        </link>
+        <link lanes="0" lane_offset="0" length="101.22" speed_limit="17" link_name="Fair Oaks Ave" id="-895152463" in_sync="true">
+          <begin node_id="931702626"/>
+          <end node_id="850852378"/>
+          <position>
+            <point lat="34.12248" lng="-118.15029" elevation="0"/>
+            <point lat="34.12157" lng="-118.1503" elevation="0"/>
+          </position>
+	   <shape>}tgoEffcpUlC@</shape>
+	   <link_type id="0" name=""/>
+	   </link>
+	  </LinkList>

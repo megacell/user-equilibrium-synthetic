@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+  <settings/>
+<NetworkSet>
+    <network name="AMS Network" id="1254" mod_stamp="05-SEP-2014 12:24:08.030609" lockedForEdit="false" lockedForHistory="false">
+      <description>For Stakeholders</description>
+      <NodeList>
+        <node id="931702626" in_sync="false">
+          <outputs>
+            <output link_id="-895152463"/>
+            <output link_id="895152464"/>
+          </outputs>
+          <inputs>
+            <input link_id="-895152464"/>
+            <input link_id="895152463"/>
+          </inputs>
+          <position>
+            <point lat="34.12248" lng="-118.15029" elevation="0"/>
+          </position>
+          <node_type id="1" name="Freeway"/>
+        </node>
+        <node id="920539711" in_sync="false">
+          <outputs>
+            <output link_id="881371831"/>
+          </outputs>
+          <inputs>
+            <input link_id="881371830"/>
+          </inputs>
+          <position>
+            <point lat="34.14448" lng="-118.02391" elevation="0"/>
+          </position>
+          <node_type id="1" name="Freeway"/>
+        </node>
+	</NodeList>
+      <LinkList>
+	<link lanes="0" lane_offset="0" length="211.336" speed_limit="11" link_name="E Walnut St" id="-908298894" in_sync="true">
+          <begin node_id="49332695"/>
+          <end node_id="890533383"/>
+          <position>
+            <point lat="34.148" lng="-118.0892" elevation="0"/>
+            <point lat="34.14793" lng="-118.08691" elevation="0"/>
+          </position>
+          <shape>_ploEnhwoULiM</shape>
+          <link_type id="0" name=""/>
+        </link>
+        <link lanes="0" lane_offset="0" length="78.98" speed_limit="17" link_name="Fair Oaks Ave" id="-895152464" in_sync="true">
+          <begin node_id="850852381"/>
+          <end node_id="931702626"/>
+          <position>
+            <point lat="34.12319" lng="-118.15028" elevation="0"/>
+            <point lat="34.12248" lng="-118.15029" elevation="0"/>
+          </position>
+          <shape>}tgoEffcpUlC@</shape>
+          <link_type id="0" name=""/>
+        </link>
+        <link lanes="0" lane_offset="0" length="101.22" speed_limit="17" link_name="Fair Oaks Ave" id="-895152463" in_sync="true">
+          <begin node_id="931702626"/>
+          <end node_id="850852378"/>
+          <position>
+            <point lat="34.12248" lng="-118.15029" elevation="0"/>
+            <point lat="34.12157" lng="-118.1503" elevation="0"/>
+          </position>
+	   <shape>}tgoEffcpUlC@</shape>
+	   <link_type id="0" name=""/>
+	   </link>
+	  </LinkList>
+ </network>
+ </NetworkSet>
+   <SignalSet/>
+  <SensorSet lockedForEdit="false" lockedForHistory="false"/>
+  <EventSet/>
+  <ControllerSet/>
+</scenario>

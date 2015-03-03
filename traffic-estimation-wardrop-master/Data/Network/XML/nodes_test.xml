@@ -1,0 +1,28 @@
+<NodeList>
+        <node id="931702626" in_sync="false">
+          <outputs>
+            <output link_id="-895152463"/>
+            <output link_id="895152464"/>
+          </outputs>
+          <inputs>
+            <input link_id="-895152464"/>
+            <input link_id="895152463"/>
+          </inputs>
+          <position>
+            <point lat="34.12248" lng="-118.15029" elevation="0"/>
+          </position>
+          <node_type id="1" name="Freeway"/>
+        </node>
+        <node id="920539711" in_sync="false">
+          <outputs>
+            <output link_id="881371831"/>
+          </outputs>
+          <inputs>
+            <input link_id="881371830"/>
+          </inputs>
+          <position>
+            <point lat="34.14448" lng="-118.02391" elevation="0"/>
+          </position>
+          <node_type id="1" name="Freeway"/>
+        </node>
+	</NodeList>
