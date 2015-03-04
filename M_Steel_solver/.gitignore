@@ -3,3 +3,4 @@
 /networks/*
 !/networks/.gitkeep
 GEF
+output.txt

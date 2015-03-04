@@ -4,7 +4,7 @@
 .project
 .pydevproject
 *.mat
-*.m~
+*.m
 *.dbf
 *.prj
 *.csv
@@ -18,3 +18,6 @@ taz_boundary_scag_2009/*
 !graph.py
 !draw_graph.py
 !transform_output.py
+.sh~
+.txt~
+.rtf
