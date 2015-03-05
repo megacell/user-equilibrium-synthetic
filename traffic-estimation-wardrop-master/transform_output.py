@@ -9,11 +9,11 @@ __author__ = 'hugo.ghiron'
 import numpy as np
 import csv
 
-def transform_cpp_output_to_jason_format(clean_links, nodes, filepath = '/home/hugo/Desktop/Hugo/Code/M_Steel_solver/output.txt'): 
+def transform_cpp_output_to_jason_format(clean_links, nodes, filepath = '../M_Steel_solver/output.txt'): 
     cpp_output = read_network_flows_from_cpp_output(filepath)
     write_output_in_Jason_format(clean_links, nodes, cpp_output)
 
-def read_network_flows_from_cpp_output(filepath = '/home/hugo/Desktop/Hugo/Code/M_Steel_solver/output.txt'):
+def read_network_flows_from_cpp_output(filepath = '../M_Steel_solver/output.txt'):
     variable = np.genfromtxt(filepath, delimiter = '\t', skiprows = 6)   
     origins = variable[:,1]
     dests = variable[:,2]

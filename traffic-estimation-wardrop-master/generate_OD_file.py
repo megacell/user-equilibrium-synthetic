@@ -101,7 +101,7 @@ def write_OD_textfile_in_cpp_format(clean_ODs, filename):
         text_file.write('Origin '+str(int(current_origin))+'\n')
         return current_origin    
     
-    text_file = open('/home/hugo/Desktop/Hugo/Code/M_Steel_solver/networks/OSM_medium/'+filename, "w")
+    text_file = open('../M_Steel_solver/networks/OSM_medium/'+filename, "w")
     text_file.write('<NUMBER OF ZONES> '+str(n_zones)+'\n')
     text_file.write('<TOTAL OD FLOW> '+str(total_flow)+'\n')
     text_file.write('<END OF METADATA>\n')

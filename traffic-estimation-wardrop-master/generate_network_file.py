@@ -39,7 +39,7 @@ def get_clean_links(nodes, delaytype = 'Polynomial', parameters = matrix([0.0, 0
     return links
 
 def write_network_file_in_cpp_format(clean_links,n_zones, n_nodes):
-    text_file = open("/home/hugo/Desktop/Hugo/Code/M_Steel_solver/networks/OSM_medium/OSM_medium_net.txt", "w")
+    text_file = open("../M_Steel_solver/networks/OSM_medium/OSM_medium_net.txt", "w")
     text_file.write('<NUMBER OF ZONES> '+str(n_zones)+'\n')
     text_file.write('<NUMBER OF NODES> '+str(n_nodes)+'\n')
     text_file.write('<FIRST THRU NODE> 1\n') #I haven't fully understood this parameter yet (Hugo)
