@@ -7,7 +7,7 @@
 *.m
 *.dbf
 *.prj
-*.csv
+
 *.json
 *.qpj
 taz_boundary_scag_2009/*
