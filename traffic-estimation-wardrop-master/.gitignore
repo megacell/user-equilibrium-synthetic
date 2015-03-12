@@ -7,7 +7,6 @@
 *.m
 *.dbf
 *.prj
-
 *.json
 *.qpj
 taz_boundary_scag_2009/*
@@ -18,6 +17,8 @@ taz_boundary_scag_2009/*
 !graph.py
 !draw_graph.py
 !transform_output.py
+!util.py
+!postgres_queries.py
 .sh~
 .txt~
 .rtf

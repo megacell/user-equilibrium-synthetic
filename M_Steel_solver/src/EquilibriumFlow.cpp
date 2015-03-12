@@ -78,7 +78,8 @@ int main (int argc, char **argv)
 //     	general("networks/ChicagoRegional/ChicagoRegional_net.txt", "networks/ChicagoRegional/ChicagoRegional_trips.txt", 0.25, 0.1, 1e-5);
 //	general("networks/Braess/Braess_net.txt", "networks/Braess/Braess_trips.txt");
 //      general("networks/TestExample/TestExample_net.txt", "networks/TestExample/TestExample_trips.txt");
-        general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt");
+//      general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt");
+        general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt", 0.0, 0.0, 1e-9);
 //	general("networks/Auckland_net2.txt", "networks/Auckland_trips.txt");
 //	general("networks/SiouxFalls_net.txt", "networks/SiouxFalls_trips.txt");
 //	general("networks/Anaheim_net.txt", "networks/Anaheim_trips.txt");
