@@ -22,10 +22,10 @@ def read_network_flows_from_cpp_output(filepath = '../M_Steel_solver/output.txt'
     return links
 
 def write_output_in_Jason_format(clean_links, nodes, output_cpp, osm_source, dict_link_2_attributes):
-    with open('output_for_Jason.csv', 'wb') as csvfile:
+    with open('../data-vizualisation/data/OSM_LA.csv', 'wb') as csvfile:
         writer = csv.writer(csvfile, delimiter = ';')
         if osm_source == False:
-            writer.writerow(['lng1', 'lat1', 'lng2', 'lat2', 'flow/capacity', 'travel_time/fftt', 'capacity'])
+            writer.writerow(['lng1', 'lat1', 'lng2', 'lat2', 'flow/capacity', 'travel_time/fftt', 'capacity', 'freespeed', 'length', 'fftt'])
             for i in range(len(output_cpp)):
                 link_output = output_cpp[i]
                 link_input = clean_links[i]
@@ -33,7 +33,7 @@ def write_output_in_Jason_format(clean_links, nodes, output_cpp, osm_source, dic
                 cap = 1/link_input[4][1]
                 flow = link_output[2]
                 ratio_travel_times = 1 + 0.15*np.power(flow/cap,4)
-                writer.writerow([lng1, lat1, lng2, lat2, flow/cap, ratio_travel_times, cap])
+                writer.writerow([lng1, lat1, lng2, lat2, flow/cap, ratio_travel_times, cap, 0, 0, 0])
         else:
             writer.writerow(['lng1', 'lat1', 'lng2', 'lat2', 'flow/capacity', 'travel_time/fftt', 'capacity', 'freespeed', 'length', 'fftt'])
             for i in range(len(output_cpp)):

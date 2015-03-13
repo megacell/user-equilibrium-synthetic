@@ -18,7 +18,7 @@ import utm
 #https://pypi.python.org/pypi/utm
 #To know the UTM you're dealing with: uncomment below
 #print utm.from_latlon(lat_test, lng_test)
-#For Los Angeles, utm.from_latlon(34, -118) = 11, N
+#For Los Angeles, utm.from_latlon(38, -118) = 11, N
 import csv
 
 def is_in_LA_Box(lat, lng):
