@@ -32,7 +32,7 @@ def main(osm_source = False, box = [33.0, 36.0, -120.0, -116.0]):
     
     #Create the networks-file from the csv files of our networks for the Frank Wolfe algorithm
     print 'Creating network-file'       
-    nw.write_network_file_in_cpp_format(clean_links, n_zones, len(nodes))
+    nw.write_network_file_in_cpp_format(clean_links, n_zones, len(nodes), dict_link_2_attributes)
     
     #Run the code from M. Steel
     print 'Running FW algorithm'    

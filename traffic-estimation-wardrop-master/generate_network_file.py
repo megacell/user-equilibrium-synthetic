@@ -100,7 +100,7 @@ def kill_double_links(links_list):
     print str(counter)+' links removed'
     return links_without_double
 
-def write_network_file_in_cpp_format(clean_links,n_zones, n_nodes):
+def write_network_file_in_cpp_format(clean_links,n_zones, n_nodes, dict_link_2_attributes = {}):
     text_file = open("../M_Steel_solver/networks/OSM_medium/OSM_medium_net.txt", "w")
     text_file.write('<NUMBER OF ZONES> '+str(n_zones)+'\n')
     text_file.write('<NUMBER OF NODES> '+str(n_nodes)+'\n')
@@ -111,7 +111,10 @@ def write_network_file_in_cpp_format(clean_links,n_zones, n_nodes):
     text_file.write('\n')
     for link in clean_links:
         startnode, endnode, cap, free_flow_delay = link[0], link[1], 1/link[4][1], link[3]
-        line_str = str(int(startnode))+'\t'+str(int(endnode))+'\t'+str(int(cap))+'\t'+str(0)+'\t'+str(free_flow_delay)+'\t'+str(0.15)+'\t'+str(4)+'\t'+str(25)+'\t'+str(0)+'\t'+str(3)+'\t;'        
+        if dict_link_2_attributes != {}:
+            (cap, freespeed, length, free_flow_delay) =  dict_link_2_attributes[(startnode, endnode)]
+            line_str = str(int(startnode))+'\t'+str(int(endnode))+'\t'+str(int(cap))+'\t'+str(length)+'\t'+str(free_flow_delay)+'\t'+str(0.15)+'\t'+str(4)+'\t'+str(freespeed)+'\t'+str(0)+'\t'+str(3)+'\t;'        
+        else : line_str = str(int(startnode))+'\t'+str(int(endnode))+'\t'+str(int(cap))+'\t'+str(0)+'\t'+str(free_flow_delay)+'\t'+str(0.15)+'\t'+str(4)+'\t'+str(25)+'\t'+str(0)+'\t'+str(3)+'\t;'        
         text_file.write(line_str+'\n')  
     
 def main(osm_source = False):
