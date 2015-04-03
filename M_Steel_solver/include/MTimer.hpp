@@ -29,15 +29,20 @@
 	class MTimer {
 	public:
 		MTimer() {
-			clock_gettime(CLOCK_MONOTONIC, &started);
+			//clock_gettime(CLOCK_MONOTONIC, &started);
+			gettimeofday(&started, NULL);
 		}
 		double elapsed() {
-			timespec temp;
-			clock_gettime(CLOCK_MONOTONIC, &temp);
-			return (double)(temp.tv_sec - started.tv_sec)+(double)((temp.tv_nsec-started.tv_nsec))/1.0E9;
+			//timespec temp;
+			timeval temp;
+			//clock_gettime(CLOCK_MONOTONIC, &temp);
+			gettimeofday(&temp, NULL);
+			//return (double)(temp.tv_sec - started.tv_sec)+(double)((temp.tv_nsec-started.tv_nsec))/1.0E9;
+			return (double)(temp.tv_sec - started.tv_sec)+(double)((temp.tv_usec-started.tv_usec))/1.0E6;
 		}
 	private:
-		timespec started;
+		//timespec started;
+		struct timeval started;
 	};
 #endif
 

@@ -54,12 +54,8 @@ void general(const char* netString, const char* tripString, double distanceFacto
 		time += t2.elapsed();
 	}
 	cout << time << ' ' << thisGap << endl;
+	cout << "flag" << endl;
 	cout << abs << endl;
-        ////Output a file with all the flows
-        ofstream myfile;
-        myfile.open ("output.txt");
-        myfile << abs;
-        myfile.close();
 //*/
 }
 
@@ -73,16 +69,13 @@ class func {
 
 int main (int argc, char **argv)
 {
-        cout << "Starting to load the network";
-//	general("networks/ChicagoSketch/ChicagoSketch_net.txt", "networks/ChicagoSketch/ChicagoSketch_trips.txt", 0.04, 0.02);
-//     	general("networks/ChicagoRegional/ChicagoRegional_net.txt", "networks/ChicagoRegional/ChicagoRegional_trips.txt", 0.25, 0.1, 1e-5);
-//	general("networks/Braess/Braess_net.txt", "networks/Braess/Braess_trips.txt");
-//      general("networks/TestExample/TestExample_net.txt", "networks/TestExample/TestExample_trips.txt");
-        general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt");
-//      general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt", 0.0, 0.0, 1e-9);
+//	general("networks/ChicagoSketch_net.txt", "networks/ChicagoSketch_trips.txt", 0.04, 0.02);
+	general("networks/Braess/Braess_net.txt", "networks/Braess/Braess_trips.txt");
+//	general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt");
 //	general("networks/Auckland_net2.txt", "networks/Auckland_trips.txt");
 //	general("networks/SiouxFalls_net.txt", "networks/SiouxFalls_trips.txt");
 //	general("networks/Anaheim_net.txt", "networks/Anaheim_trips.txt");
+//	general("networks/ChicagoRegional_net.txt", "networks/ChicagoRegional_trips.txt", 0.25, 0.1, 1e-5);
 //	general("networks/Philadelphia_network.txt", "networks/Philadelphia_trips.txt", 0.0, 0.055, 1e-4);
 
 	 //Braess' network paradox

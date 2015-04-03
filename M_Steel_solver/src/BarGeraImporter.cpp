@@ -45,10 +45,12 @@ void BarGeraImporter::readInNetwork(InputGraph& graph, std::istream& is)
 	<FIRST THRU NODE> F
 	<NUMBER OF LINKS> E
 	<END OF METADATA>
+	
 	We should also deal with comments properly.
 	*/
 	skipComments(is);
 	is.ignore(numeric_limits<streamsize>::max(),'\n');//Skip #zones - not important
+	
 	skipComments(is);
 	is.ignore(numeric_limits<streamsize>::max(),'>');//Skip to #nodes
 	is >> nodes;//Read in #nodes
@@ -62,9 +64,9 @@ void BarGeraImporter::readInNetwork(InputGraph& graph, std::istream& is)
 	is.ignore(numeric_limits<streamsize>::max(),'>');//Skip to #edges
 	unsigned arcs;
 	is >> arcs;
-
+	
 	endMetadata(is);
-
+	
 	while (arcs --> 0) {
 		skipComments(is);
 		unsigned to, from;
