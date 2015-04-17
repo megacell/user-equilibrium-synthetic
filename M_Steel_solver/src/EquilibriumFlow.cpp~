@@ -56,11 +56,11 @@ void general(const char* netString, const char* tripString, double distanceFacto
 	cout << time << ' ' << thisGap << endl;
 	cout << "flag" << endl;
 	cout << abs << endl;
--        ////Output a file with all the flows
--        ofstream myfile;
--        myfile.open ("output.txt");
--        myfile << abs;
--        myfile.close();
+        ////Output a file with all the flows
+        ofstream myfile;
+        myfile.open ("output.txt");
+        myfile << abs;
+        myfile.close();
 //*/
 }
 

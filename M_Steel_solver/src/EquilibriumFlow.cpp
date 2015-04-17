@@ -54,7 +54,7 @@ void general(const char* netString, const char* tripString, double distanceFacto
 		time += t2.elapsed();
 	}
 	cout << time << ' ' << thisGap << endl;
-	cout << "flag" << endl;
+	cout << "flag_here" << endl;
 	cout << abs << endl;
         ////Output a file with all the flows
         ofstream myfile;
@@ -76,7 +76,8 @@ int main (int argc, char **argv)
 {
 //	general("networks/ChicagoSketch_net.txt", "networks/ChicagoSketch_trips.txt", 0.04, 0.02);
 //	general("networks/Braess/Braess_net.txt", "networks/Braess/Braess_trips.txt");
-	general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt", 0.0, 0.0, 1e-9);
+//	general("networks/OSM_medium/OSM_medium_net.txt", "networks/OSM_medium/OSM_medium_trips.txt", 0.0, 0.0, 1e-6);
+	general("networks/Toy_3D/Toy_3D_net.txt", "networks/Toy_3D/Toy_3D_trips.txt", 0.0, 1.0);
 	 //Braess' network paradox
 /*	InputGraph g;
 	g.setNodes(5);

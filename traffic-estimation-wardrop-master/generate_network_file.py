@@ -47,6 +47,11 @@ def get_clean_links_from_OSM_raw_links(nodes, raw_links, delaytype='Polynomial',
         theta = parameters
         degree = len(theta)
         for startnode, endnode, route, ffdelay, slope in tmp:
+            #Below we are changing a capacity to simulate an accident
+            #if ((startnode == 852 and endnode == 854) or (startnode == 854 and endnode == 852)): 
+            if ((startnode == 1616 and endnode == 1664) or (startnode == 1664 and endnode == 1616)): 
+                slope = 1
+                print 'found it'
             coef = [ffdelay*a*b for a,b in zip(theta, np.power(slope, range(1,degree+1)))]
             clean_links.append((startnode, endnode, route, ffdelay, (ffdelay, slope, coef))) 
     return clean_links
@@ -73,6 +78,11 @@ def extract_raw_nodes_links_from_box(latmin=33.0, latmax=36.0, lngmin=-120.0, ln
         if (sn in osmId_2_gId.keys() and en in osmId_2_gId.keys()):
             startnode = osmId_2_gId[sn]
             endnode = osmId_2_gId[en]
+            #trying to know the new ID of a given link
+            #if (sn == 321924196 and en == 321911536): 
+            if (sn == 27976737 and en == 279669910): 
+                print 'here are the startnode/endnode of the link we\'re looking for'
+                print startnode, endnode
             length = link_data[i][3]
             cap = link_data[i][5]
             freespeed = link_data[i][6]
@@ -110,7 +120,7 @@ def write_network_file_in_cpp_format(clean_links,n_zones, n_nodes, dict_link_2_a
     text_file.write('~ Init/Term/Cap/Length/FreeFlowTime/B=0.15/Power=4/Speed limit/Toll/Type;\n')
     text_file.write('\n')
     for link in clean_links:
-        startnode, endnode, cap, free_flow_delay = link[0], link[1], 1/link[4][1], link[3]
+        startnode, endnode, cap, free_flow_delay = link[0], link[1], 1./link[4][1], link[3]
         if dict_link_2_attributes != {}:
             (cap, freespeed, length, free_flow_delay) =  dict_link_2_attributes[(startnode, endnode)]
             line_str = str(int(startnode))+'\t'+str(int(endnode))+'\t'+str(int(cap))+'\t'+str(length)+'\t'+str(free_flow_delay)+'\t'+str(0.15)+'\t'+str(4)+'\t'+str(freespeed)+'\t'+str(0)+'\t'+str(3)+'\t;'        
@@ -135,3 +145,7 @@ def main(osm_source = False):
     
 if __name__ == '__main__':
     main()
+    
+for link in clean_links: 
+    if link[0] == 1616: 
+        print link

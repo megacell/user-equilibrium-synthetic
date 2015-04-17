@@ -81,7 +81,7 @@ void BarGeraImporter::readInNetwork(InputGraph& graph, std::istream& is)
 		//Don't use speed, type?
 		BarGeraBPRFunction func(zeroFlowTime, capacity, alpha, beta, length*distanceCost+toll*tollCost);
 		graph.addEdge(from-1, to-1, func.costFunction());
-		
+
 		is.ignore(numeric_limits<streamsize>::max(),';');//Skip to end of row
 	}
 }
